@@ -65,20 +65,21 @@ a span i {
 }
 
 .animacao-3d {
-    animation: rotacao-3d 2s ease-in-out;
+    animation: zoom-3d 2s ease-in-out;
 }
 
-@keyframes rotacao-3d {
+@keyframes zoom-3d {
     0% {
-      transform: rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-      transform: rotateX(180deg) rotateY(180deg);
-  }
-  100% {
-      transform: rotateX(360deg) rotateY(360deg);
-  }
+        transform: scale(1) rotateZ(0deg);
+    }
+    50% {
+        transform: scale(1.5) rotateZ(180deg);
+    }
+    100% {
+        transform: scale(1) rotateZ(360deg);
+    }
 }
+
 
 
 @media (max-width: 768px) {
